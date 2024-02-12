@@ -1,0 +1,25 @@
+.carousel-item active{
+    width: 450px;
+}
+
+
+.row{
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.row::-webkit-scrollbar{
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    border-radius: 30px;
+    display: flex;
+}
+
