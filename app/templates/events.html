@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
-{% block content %}
 
+{% block content %}
+<div class="flex">
+<div>
+    <br>
+<br>
 <a class="btn btn-primary" href="{% url 'generate_pdf' }" role="button">Generate PDF</a> <button class="btn btn-primary">Generate CSV</button>
-<br><br>
+</div>
+
+<div>
 <table class="table table-striped-columns">
     <thead class="text-center">
         <tr class="table-dark">
@@ -24,7 +30,7 @@
                     <td class="table-dark">{{ event.title }}</td>
                     <td class="table-dark">{{ event.start_date_time }}</td>
                     <td class="table-dark">{{ event.end_date_time}}</td>
-                    <td class="table-dark"> <img class="rounded" alt="100%x280" src="media/{{event.image}}" style="width: 30%;height:10%"> </td>
+                    <td class="table-dark"> <img class="rounded" alt="100%x280" src="media/{{event.image}}" style="width: 30%;height:10%;"> </td>
                     <td class="table-dark">{{ event.venue|capfirst }}</td>
                     <td class="table-dark">{{ event.organizer|capfirst }}</td>
                 </tr>
@@ -32,5 +38,6 @@
         {% endfor %}
     </tbody>
 </table>
-
+</div>
+</div>
 {% endblock %}
